@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* ---------------------- General ---------------------- */
+.section-app{
+    display: block;
+    max-width: 960px;
+}
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: #ffffff78;
+}
+
+/* ################################# ANGULAR MATERIAL CAMPOS REDONDEADOS PEQUEÑOS #################################*/
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #444444;
+    font-weight: 300;
+    font-size: 15px;
+}
+.mat-form-field {
+    line-height: 18px !important;
+    width: 100%; 
+    padding: 0px 10px;
+}
+.mat-form-field-wrapper {
+    padding-bottom: 15px !important;
+    margin: 0px !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 6px 0px !important;
+}
+.mat-form-field-infix {
+    border-top: 5px solid transparent !important;
+}
+.mat-input-element{
+    font-size: 15px !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline-start, .mat-form-field-appearance-outline .mat-form-field-outline-end{
+    min-width:15px !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline-start{
+    border-radius: 15px 0 0 15px !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline-end{
+    border-radius: 0 15px 15px 0 !important;
+}
+
+
+
+
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+    background-color: #5b8fff;
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #5b8fff;
+}

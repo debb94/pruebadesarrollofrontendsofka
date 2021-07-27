@@ -1,0 +1,33 @@
+<div class="container section-app">
+    <div class="row">
+        <h1 class="py-5 text-center">Greeting App</h1>
+    </div>
+    <div class="row justify-content-md-center">
+        <form [formGroup]="formPersona">
+            <div class="row justify-content-md-center">
+                <div class="col-md-8">
+                    <mat-form-field class="input-full-width col-md-12" appearance="outline" id="input_name">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput formControlName="name">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-8 options-languages py-3">
+                    <mat-radio-group aria-label="Select an option" formControlName="language" name="language" *ngFor="let idioma of idiomas" class="options-item-language">
+                        <mat-radio-button  [value]="idioma.codigo">{{idioma.nombre}}</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </form>
+        <div class="col-md-8 section-buttons py-5">
+            <button class="btn btn-bold" (click)="saludar()"><span class="material-icons">emoji_people</span> Saludar</button>
+            <button class="btn btn-bold" (click)="nombre()"><span class="material-icons">person</span> Nombre</button>
+            <button class="btn btn-bold" (click)="despedir()"><span class="material-icons">logout</span> Despedir</button>
+        </div>
+        <div class="col-md-8 py-3">
+            <h2 class="text-center">{{msg}}</h2>
+        </div>
+    </div>
+</div>
+<div *ngIf="loading" class="loading">
+    <mat-spinner [diameter]="50"></mat-spinner>
+  </div>
